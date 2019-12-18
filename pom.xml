@@ -10,7 +10,44 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>flink-learn-cep</module>
+        <module>flink-learn-streaming</module>
     </modules>
+
+    <properties>
+        <compiler.version>1.8</compiler.version>
+        <flink.version>1.9.1</flink.version>
+        <java.version>1.8</java.version>
+        <scala.binary.version>2.11</scala.binary.version>
+
+        <fastjson.version>1.2.56</fastjson.version>
+        <lombok.version>1.18.8</lombok.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+        <!-- Add logging framework, to produce console output when running in the IDE. -->
+        <!-- These dependencies are excluded from the application JAR by default. -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.7</version>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
 
 
 </project>
